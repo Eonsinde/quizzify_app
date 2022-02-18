@@ -1,8 +1,8 @@
 import React from 'react';
-import { Text, View, StyleSheet, TouchableOpacity } from 'react-native';
+import { Text, StyleSheet, TouchableOpacity } from 'react-native';
 
 
-export default function QuizOption({ text:optionText, setAnswer }) {
+export default function QuizOption({ text:optionText, setActiveOption, setAnswer }) {
   const handleSetting = () => {
     // console.log(optionText, "Hello world");
     setAnswer(optionText);

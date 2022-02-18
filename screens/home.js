@@ -18,7 +18,7 @@ const Home = ({ navigation }) => {
             </Image>
         </View>
         <TouchableOpacity style={globalStyles.btn} onPress={() => navigation.navigate("Difficulty")}>
-            <Text style={{ color: "#fff", textAlign: "center", fontSize: "1.1rem", fontWeight: "bold" }}>Begin</Text>
+            <Text style={{ color: "#fff", textAlign: "center", fontSize: "1.1rem", fontWeight: "bold" }}>Play</Text>
         </TouchableOpacity>
     </View>
   )

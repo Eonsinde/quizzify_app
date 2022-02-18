@@ -5,10 +5,28 @@ import { globalStyles } from '../styles/global'
 
 
 const Result = ({ navigation, route }) => {
+  const handleResultMsg = () => {
+    if (route.params.score >= 8) // above 8
+      return "Excellent!";
+    else if (route.params.score >= 5 && route.params.score <= 7) // btwn 5-7
+      return "Nice Try";
+    else if (route.params.score >= 0 && route.params.score <= 4) // btwn 0-4
+      return "Quite Poor";
+  }
+
   return (
     <View style={globalStyles.container}>
         <View>
             <Text style={{ color: "#fff", fontSize: '2rem', fontWeight: "bold", textAlign: 'center', marginVertical: 30 }}>SCORE</Text>
+            <Text style={{ 
+              color: (route.params.score < 5) ? "#ef233c" : "#70e000", 
+              fontSize: '1.8rem', 
+              fontWeight: "bold", 
+              textAlign: 'center', 
+              marginVertical: 15 
+            }}>
+              { handleResultMsg().toUpperCase() }
+            </Text>
         </View>
         <View style={globalStyles.bannerWrapper}>
           <Image
@@ -30,7 +48,7 @@ const Result = ({ navigation, route }) => {
 const styles = StyleSheet.create({
   scoreText:{
     color: "#fff",
-    fontSize: '3rem',
+    fontSize: '2.5rem',
     fontWeight: 'bold',
     textAlign: 'center'
   },
