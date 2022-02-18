@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { StyleSheet, Text, View, Image, TouchableOpacity, FlatList, Alert } from 'react-native'
+import { StyleSheet, Text, View, TouchableOpacity } from 'react-native'
 import Constants from 'expo-constants'
 import { getQuestions } from '../handleRequests/getQuestions'
 
